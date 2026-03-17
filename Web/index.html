@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Warehouse Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login-section" class="login-container">
+    <h2>Warehouse Admin Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()" class="btn-primary">Login</button>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>SmartWarehouse</h2>
+        <ul>
+           <li onclick="showSection('dashboardSection')">Dashboard</li>
+           <li onclick="showSection('inventorySection')">Inventory</li>
+           <li onclick="showSection('analyticsSection')">Analytics</li>
+           <li onclick="showSection('alertsSection')">Alerts</li>
+        </ul>
+        <button onclick="logout()" class="btn-primary logout-btn">Logout</button>
+    </aside>
+  
