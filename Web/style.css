@@ -1,1 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
+body {
+    background: #f5f7fb;
+}
+
+/* ================= LOGIN ================= */
+
+.login-container {
+    width: 350px;
+    margin: 120px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.btn-primary {
+    background: #0a66c2;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* ================= DASHBOARD LAYOUT ================= */
+
+.dashboard {
+    display: none;
+    min-height: 100vh;
+}
+
+.dashboard.active {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 230px;
+    background: #0a66c2;
+    color: white;
+    padding: 30px 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 12px 0;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.sidebar li:hover {
+    opacity: 1;
+}
+
+.logout-btn {
+    margin-top: 50px;
+    background: white;
+    color: #0a66c2;
+    width: 100%;
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.topbar h1 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* ================= STAT CARDS ================= */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    font-size: 14px;
+    color: #777;
+}
+
+.card h2 {
+    margin-top: 10px;
+    color: #0a66c2;
+    font-size: 28px;
+}
