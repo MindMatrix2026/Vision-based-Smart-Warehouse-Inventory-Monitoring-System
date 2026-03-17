@@ -34,4 +34,72 @@
         </ul>
         <button onclick="logout()" class="btn-primary logout-btn">Logout</button>
     </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP HEADER -->
+        <header class="topbar">
+            <h1>Warehouse Dashboard</h1>
+        </header>
+
+        <!-- STAT CARDS -->
+        <section id="dashboardSection" class="card-grid">
+            <div class="card">
+                <h3>Total Products</h3>
+                <h2 id="totalItems">0</h2>
+            </div>
+            <div class="card">
+                <h3>Low Stock</h3>
+                <h2 id="lowStockCount">0</h2>
+            </div>
+        </section>
+
+        <!-- ADD PRODUCT -->
+        <section class="panel">
+            <h2>Add Inventory</h2>
+            <input type="text" id="productName" placeholder="Product Name">
+            <input type="number" id="productQty" placeholder="Quantity">
+            <button onclick="addProduct()" class="btn-primary">Add Product</button>
+        </section>
+
+        <!-- INVENTORY TABLE -->
+        <section class="panel" id="inventorySection">
+            <h2>Inventory Table</h2>
+            <table id="inventoryTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- ALERTS -->
+        <section class="panel" id="alertsSection">
+            <h2>Smart Alerts</h2>
+            <div id="alerts"></div>
+        </section>
+
+        <!-- CHART -->
+        <section class="panel" id="analyticsSection">
+            <h2>Inventory Analytics</h2>
+            <canvas id="inventoryChart"></canvas>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+    
   
