@@ -11,7 +11,7 @@ A full-stack inventory management system for warehouse administrators. Built wit
 - 📊 Inventory analytics bar chart
 - 🔔 Smart low-stock alerts
 - 🔄 Auto-refresh every 5 seconds from API
-- ➕ Add / ➖ Remove products from dashboard
+
 
 ---
 
