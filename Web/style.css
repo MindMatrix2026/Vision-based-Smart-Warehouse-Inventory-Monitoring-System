@@ -128,3 +128,107 @@ body {
     color: #0a66c2;
     font-size: 28px;
 }
+
+/* ================= PANELS ================= */
+
+.panel {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.panel h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/* FORM INPUTS */
+.panel input {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+/* ================= TABLE ================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #0a66c2;
+    color: white;
+}
+
+th, td {
+    padding: 14px;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8fbff;
+}
+
+tbody tr:hover {
+    background: #eaf2ff;
+}
+
+table button {
+    background: #ff4d4d;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ================= ALERTS ================= */
+
+#alerts p {
+    padding: 10px;
+    background: #fff3f3;
+    border-left: 4px solid red;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+/* ================= CHART ================= */
+
+canvas {
+    margin-top: 20px;
+}
+.low {
+    color: red;
+    font-weight: 500;
+}
+
+.in-stock {
+    color: green;
+    font-weight: 500;
+}
+
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #0a66c2;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease;
+}
+
+.content-section {
+    display: none;
+}
+
+.active-menu {
+    background: rgba(255,255,255,0.2);
+    padding-left: 10px;
+    border-radius: 6px;
+} 
