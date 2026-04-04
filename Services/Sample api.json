@@ -1,0 +1,90 @@
+{
+  "apis": [
+    {
+      "name": "Login",
+      "method": "POST",
+      "endpoint": "/login",
+      "description": "Authenticate user and receive a JWT token",
+      "request": {
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "UserId": "admin",
+          "Password": "password123"
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Login successful",
+          "body": {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcwMDAwMDAwMH0.sample_signature",
+            "message": "Login successful"
+          }
+        },
+        "403": {
+          "description": "Invalid credentials",
+          "body": {
+            "detail": "Invalid UserId or Password"
+          }
+        }
+      }
+    },
+    {
+      "name": "GetLatestInventryStock",
+      "method": "GET",
+      "endpoint": "/GetLatestInventryStock",
+      "description": "Fetch the latest inventory stock list (requires JWT token)",
+      "request": {
+        "headers": {
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcwMDAwMDAwMH0.sample_signature"
+        },
+        "body": null
+      },
+      "responses": {
+        "200": {
+          "description": "List of inventory items",
+          "body": [
+            {
+              "item_id": "ITM001",
+              "item_name": "Laptop",
+              "item_quantity": 42
+            },
+            {
+              "item_id": "ITM002",
+              "item_name": "Mouse",
+              "item_quantity": 150
+            },
+            {
+              "item_id": "ITM003",
+              "item_name": "Keyboard",
+              "item_quantity": 95
+            },
+            {
+              "item_id": "ITM004",
+              "item_name": "Monitor",
+              "item_quantity": 30
+            },
+            {
+              "item_id": "ITM005",
+              "item_name": "USB-C Hub",
+              "item_quantity": 200
+            }
+          ]
+        },
+        "401": {
+          "description": "Missing or invalid token",
+          "body": {
+            "detail": "Invalid token"
+          }
+        },
+        "403": {
+          "description": "Token has expired",
+          "body": {
+            "detail": "Token has expired"
+          }
+        }
+      }
+    }
+  ]
+}
