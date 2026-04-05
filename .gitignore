@@ -11,6 +11,9 @@ venv/
 dist/
 build/
 
+__pycache__/
+*.pyc
+
 # Database - do NOT push the DB file (contains real data)
 inventory.db
 
